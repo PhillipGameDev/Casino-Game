@@ -1,58 +1,69 @@
-# Slot Machine - Piggy Parade
+# Tournament of Magicians
 
-In 2019, we threw a casino-themed party for Alexandria's birthday. As an extra activity to the card games, 
-I designed this slot machine as a replica of one we became hooked on during a trip to Shreveport. \
-I'm putting this out there as a resource since it's just been sitting on a hard drive in the closet, slowly deteriorating.
+Unity card-game. Tribute to Astral Tournament.
 
-- It is not balanced.
-- It is not original (although given what little I know about copyrighting game mechanics, you could probably change the logo/title and be totally fine).
-- And most of all - It's not going to work entirely out-of-the-box
+## Description
 
+WELCOME TO THE TOURNAMENT!
 
-Click on the video below for a quick overview of how it's intended to be used: 
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/qLkZNvvKdpQ/0.jpg)](https://www.youtube.com/watch?v=qLkZNvvKdpQ)
-
-## Setup
-
-**Unity:** 5.6.0f3
-
-Not entirely taking the time to refresh my memory on all the steps, but if you're even 20% familiar with Unity it shouldn't be too hard to figure things out
-
-### Input
- Since this was designed to be used in a standalone machine, the inputs are bound through Unity's input system. Rebind those however you need, but they worked great with a standard arcade USB encoder
-
-### Fund Tracking
-The fund management for the night was done through a very simple API running on a separate machine. \
-You can self-host this project, found [here on Gitlab](https://gitlab.com/logiraffe/casino-api) (It's a bastardized version of the [Wordabeasts](http://www.logiraffe.com/wordabeasts) API, so it got the Gitlab host) \
-Just be sure to swap the url at the top of UserManager.cs
-
-```
-const string apiHost = "your-api-host.com:4800"; //Swap for your API host
-```
-
-As seen in the video above, users log into the machine simply by showing a QR code.  
-This is obviously not secure - but it's fantastic for a party where guests can share ID badges as needed.
-If you don't need this piece, ripping it out/replacing it is on you to figure out.
-
-### Balance
-One of the most important caveats before you, reader, run off and build _The Bellagio II_ on the framework presented here: \
-On this machine, the house WILL lose.
-
-People like winning. People at a party doubly so. \
-Rather than bother with any earnings tables or payout math in the week of designing this before the party, I simply built the reels with the same logo patterns as the replicated machine.
-
-The real machine has exact control over where the reels stop, and adjusts the payouts manually. \
-This machine stops the reels randomly (theoretically like early physical machines would), so the only balancing is done by tweaking the frequency and spacing of symbols on each reel. \
-You can tweak within the existing system by adjusting the symbol list in `getProperReelSymbols()` in *ReelManager.cs*, or you could rewrite the stopping code to actually pick symbols based on your payout table. 
-
-![image](https://user-images.githubusercontent.com/4682038/182770826-f03b5be1-040d-4e43-837a-73c6a7c8c8a2.png)
-
-## Misc
-
-- I know what 2019 Me was like, so my guess is there are random input checks all over the code without DEBUG flags and not grouped in one handy debug file.  You probably wanna kill all those so users can't trigger test behavior
-- I'm sure there are 20 other ways this code is broken; if you're really stuck, open an issue here and I'll try to take a look and see if I remember anything
+![alt text](https://github.com/kowalewskiadrian/Card-Game/blob/main/Assets/Board/1.jpg)
+![alt text](https://github.com/kowalewskiadrian/Card-Game/blob/main/Assets/Board/2.jpg)
+![alt text](https://github.com/kowalewskiadrian/Card-Game/blob/main/Assets/Board/3.jpg)
+![alt text](https://github.com/kowalewskiadrian/Card-Game/blob/main/Assets/Board/4.jpg)
 
 
+### Instrucions
 
-<img src='https://img.shields.io/github/license/rssteffey/slot-machine' />
+
+  Download the newest version form 'releases' and unpack it with winrar or something. Put files where you want. 
+**Remember! UnityPlayer.dll is required to run the game.**
+Use default unity configuration window to select resolution.
+**Game supports 4:3, 16:9 and 16:10.**
+
+Quick instructions:
+* You can use mouse or keyboard to play duels (menu supports only mouse).
+* Put your cards in right spot - infantry on first line and other on second.
+* **Use special abilities of cards (use RMB or Tab on card to check its stats).**
+* Duel ends when one of the players go below 1hp.
+* Creatures can attack, heal, die and do special effects.
+* Play few matches to better understand what's going on.
+
+
+### Multiplayer
+
+  Currently it's possible to play multiplayer via LAN (You can use hamachi to play over the Internet). Matchmaking isn't supported. There are some minor bugs and it's easy to crash the match with changing game speed. 
+
+### Demos
+
+  I present to you demo saving and loading feature. You can save demo on your disk and watch it later or show your incredible match to your mates.
+
+## License
+
+Project is licensed under GNU General Public License v3.0 http://creativecommons.org/licenses/by/3.0/
+
+If you want to use my assets, please read the license first.
+
+How to credit me: Put somewhere in your project link to my profile: https://github.com/exewin or this project: https://github.com/exewin/space-game
+
+Keep in mind that not everything in this project was created by me. You can find all the necessary info about other creators in in-game credits and here:
+
+* http://www.noiseforfun.com/ (some CC-BY-3 sounds)
+* https://opensource.org/licenses/OFL-1.1 (OFL for used fonts)
+* http://game-icons.net/ (CC-BY-3 icons for effects and some gui):
+Lorc http://lorcblog.blogspot.com | 
+Delapouite http://delapouite.com | 
+sbed http://opengameart.org/content/95-game-icons | 
+Skoll http://game-icons.net | 
+HeavenlyDog http://www.gnomosygoblins.blogspot.com
+
+Using assets from #card-game? Not sure how to credit them? Ask me.
+
+
+
+## Useful links
+
+* http://game-icons.net/
+* https://opengameart.org/
+* https://freesound.org/
+* http://www.noiseforfun.com/
+* https://www.youtube.com/watch?v=QVLMBRRP3nA
