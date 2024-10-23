@@ -6,10 +6,10 @@ Unity card-game. Tribute to Astral Tournament.
 
 WELCOME TO THE TOURNAMENT!
 
-![alt text](https://github.com/kowalewskiadrian/Card-Game/blob/main/Assets/Board/1.jpg)
-![alt text](https://github.com/kowalewskiadrian/Card-Game/blob/main/Assets/Board/2.jpg)
-![alt text](https://github.com/kowalewskiadrian/Card-Game/blob/main/Assets/Board/3.jpg)
-![alt text](https://github.com/kowalewskiadrian/Card-Game/blob/main/Assets/Board/4.jpg)
+![alt text](https://github.com/kowalewskiadrian/Card-Game/blob/master/Assets/Board/1.jpg)
+![alt text](https://github.com/kowalewskiadrian/Card-Game/blob/master/Assets/Board/2.jpg)
+![alt text](https://github.com/kowalewskiadrian/Card-Game/blob/master/Assets/Board/3.jpg)
+![alt text](https://github.com/kowalewskiadrian/Card-Game/blob/master/Assets/Board/4.jpg)
 
 
 ### Instrucions
